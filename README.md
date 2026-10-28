@@ -1,14 +1,7 @@
 # COS 106 – Introduction to Web Technologies: Practical Term Project
 ## Responsive Student Portfolio and Academic Management Website
 
-**Student Details:**
-- **Name:** Ibe Agu
-- **Matriculation Number:** 2025/C/SENG/0753
-- **Student ID:** 301881444
-- **Programme / Department:** B.Sc. Software Engineering
-- **Email:** i.agu1444@miva.edu.ng / ibe88agwu@gmail.com
-- **Institution:** Miva Open University, Abuja, Nigeria
-- **Cohort:** May Cohort 2026
+
 
 ---
 
