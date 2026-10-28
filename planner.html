@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Planner | Ibe Agu - Academic Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">Ibe<span>Agu</span></a>
+                <span class="badge">COS 106</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="planner.html" class="active">Academic Planner</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-container">
+        <div class="page-header">
+            <h2>Academic Task <span class="highlight">Planner</span></h2>
+            <p class="subtitle">An interactive task management system to schedule assignments, track study hours, and monitor project milestones.</p>
+        </div>
+
+        <section class="planner-wrapper">
+            <div class="planner-box">
+                <div class="planner-header">
+                    <h3>My Study &amp; Course Tasks</h3>
+                    <p>Add a new academic milestone below. Click the checkbox to mark it completed, or click the delete button to remove it.</p>
+                </div>
+
+                <!-- Input Field & Add Button -->
+                <div class="planner-input-group">
+                    <input type="text" id="taskInput" placeholder="e.g., Study COS 106 Module 4 on CSS Flexbox..." aria-label="New Academic Task">
+                    <button id="addTaskBtn" class="btn btn-primary">Add Task</button>
+                </div>
+
+                <!-- Live Task Statistics Bar -->
+                <div class="planner-status-bar">
+                    <span id="totalTasksCount" class="badge-stat">Total: 0</span>
+                    <span id="completedTasksCount" class="badge-stat stat-success">Completed: 0</span>
+                    <span id="pendingTasksCount" class="badge-stat stat-warning">Pending: 0</span>
+                    <button id="clearCompletedBtn" class="btn-text">Clear Completed</button>
+                </div>
+
+                <!-- Dynamic Task List (Manipulated by script.js) -->
+                <ul id="taskList" class="task-list">
+                    <!-- Task items populated dynamically via JavaScript -->
+                </ul>
+
+                <!-- Empty State Message -->
+                <div id="emptyState" class="empty-state" style="display: none;">
+                    <div class="empty-icon">📝</div>
+                    <p>No academic tasks currently scheduled. Add your first task above!</p>
+                </div>
+            </div>
+
+            <!-- Side Card with Academic Tips -->
+            <aside class="planner-sidebar">
+                <div class="card">
+                    <h4>Study Productivity Tips</h4>
+                    <ul class="styled-list">
+                        <li><strong>Break down big tasks:</strong> Divide large course projects into small manageable tasks.</li>
+                        <li><strong>Use Timeboxing:</strong> Dedicate 25 uninterrupted minutes (Pomodoro technique) to coding exercises.</li>
+                        <li><strong>Track milestones:</strong> Checking off tasks provides continuous positive reinforcement.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h4>Active Semester Courses</h4>
+                    <table class="mini-table">
+                        <tr>
+                            <td><strong>COS 102</strong></td>
+                            <td>Problem Solving</td>
+                        </tr>
+                        <tr>
+                            <td><strong>COS 106</strong></td>
+                            <td>Web Technologies</td>
+                        </tr>
+                        <tr>
+                            <td><strong>GST 101</strong></td>
+                            <td>Communication in English</td>
+                        </tr>
+                        <tr>
+                            <td><strong>MTH 101</strong></td>
+                            <td>General Mathematics I</td>
+                        </tr>
+                    </table>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p><strong>Student:</strong> Ibe Agu | <strong>Matric No:</strong> 2025/C/SENG/0753 | <strong>Department:</strong> B.Sc. Software Engineering</p>
+            <p>&copy; 2026 Miva Open University — COS 106: Introduction to Web Technologies Practical Term Project.</p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
