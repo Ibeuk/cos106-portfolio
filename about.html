@@ -14,8 +14,17 @@
                 <a href="index.html">Ibe<span>Agu</span></a>
                 <span class="badge">COS 106</span>
             </div>
-            <nav>
-                <ul class="nav-links">
+
+            <!-- Mobile Hamburger Menu Toggle -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav id="navbar">
+                <ul class="nav-links" id="navLinks">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html" class="active">About Me</a></li>
                     <li><a href="projects.html">Projects</a></li>
@@ -58,7 +67,7 @@
                 <h3>Educational Background</h3>
             </div>
             <div class="card-body">
-                <p class="table-intro">Below is an overview of my formal education and ongoing academic qualifications:</p>
+                <p class="table-intro">Below is an overview of my formal education and ongoing academic qualifications (swipe horizontally if viewing on a small screen):</p>
                 <div class="table-responsive">
                     <table class="custom-table">
                         <thead>
@@ -161,5 +170,7 @@
         </div>
     </footer>
 
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
 </body>
 </html>

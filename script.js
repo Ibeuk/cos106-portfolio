@@ -1,11 +1,45 @@
 /* ==========================================================================
    COS 106: Introduction to Web Technologies - Practical Term Project
-   Author: Ibe Agu (Matric No: 2025/C/SENG/0753)
-   Institution: Miva Open University | Faculty of Computing & Applied Sciences
-   File: script.js (Interactive Planner & Form Validation Script)
+   Author: Ibe Agu
+   Department: B.Sc. Software Engineering | Miva Open University
+   File: script.js (Interactive Planner, Form Validation & Mobile Menu Script)
    ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
+
+    /* ==========================================================================
+       SECTION 0: MOBILE RESPONSIVE HAMBURGER NAVIGATION
+       ========================================================================== */
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", function (e) {
+            e.stopPropagation();
+            const isOpen = navLinks.classList.toggle("open");
+            menuToggle.classList.toggle("active");
+            menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+
+        // Close mobile menu when clicking any nav item
+        navLinks.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navLinks.classList.remove("open");
+                menuToggle.classList.remove("active");
+                menuToggle.setAttribute("aria-expanded", "false");
+            });
+        });
+
+        // Close mobile menu when tapping anywhere outside the header
+        document.addEventListener("click", function (e) {
+            if (!e.target.closest("header")) {
+                navLinks.classList.remove("open");
+                menuToggle.classList.remove("active");
+                menuToggle.setAttribute("aria-expanded", "false");
+            }
+        });
+    }
+
 
     /* ==========================================================================
        SECTION 1: INTERACTIVE ACADEMIC TASK PLANNER
@@ -43,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
             { id: 1710000000001, text: "Read COS 106 Module on CSS Grid and Flexbox layouts", completed: true },
             { id: 1710000000002, text: "Implement client-side JavaScript form validation with regular expressions", completed: true },
             { id: 1710000000003, text: "Test responsive media queries across mobile and tablet viewports", completed: false },
-            { id: 1710000000004, text: "Deploy website to GitHub Pages and verify live production build", completed: false }
+            { id: 1710000000004, text: "Deploy website to cloud hosting and verify live production build", completed: false }
         ];
     }
 
@@ -272,7 +306,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 emailField.classList.add("input-error");
                 isValid = false;
             } else if (!emailRegex.test(emailVal)) {
-                emailError.textContent = "Invalid email format. Must follow standard format (e.g., student@miva.university).";
+                emailError.textContent = "Invalid email format. Must follow standard format (e.g., ibe88agwu@gmail.com).";
                 emailField.classList.add("input-error");
                 isValid = false;
             }
